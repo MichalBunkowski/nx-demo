@@ -25,7 +25,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "serve:next" : "nx serve next-app --port 4201",
-    "serve:another" : "nx serve another-app --port 4202"
+    "serve:another" : "nx serve another-app --port 4202",
+    "serve:storybook": "nx run shared-ui:storybook --port 4200"
   },
   "private": true,
   "dependencies": {
