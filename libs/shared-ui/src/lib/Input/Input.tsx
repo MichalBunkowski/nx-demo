@@ -5,7 +5,7 @@ interface Props {
   padding: number;
   disabled?: boolean;
 }
-export default function Button({ type, padding, disabled }: Props) {
+export default function Input({ type, padding, disabled }: Props) {
   return (
     <input
       type={type}
