@@ -18,5 +18,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "next-app": {
+      "tags": []
+    },
+    "next-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["next-app"]
+    }
+  }
 }
