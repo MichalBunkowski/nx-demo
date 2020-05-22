@@ -144,6 +144,92 @@
           }
         }
       }
+    },
+    "another-app": {
+      "root": "apps/another-app",
+      "sourceRoot": "apps/another-app",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/next:build",
+          "options": {
+            "root": "apps/another-app",
+            "outputPath": "dist/apps/another-app"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "another-app:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "another-app:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "builder": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "another-app:build:production"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/another-app/.eslintrc",
+            "tsConfig": [
+              "apps/another-app/tsconfig.json",
+              "apps/another-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/another-app/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/another-app/jest.config.js",
+            "tsConfig": "apps/another-app/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "another-app-e2e": {
+      "root": "apps/another-app-e2e",
+      "sourceRoot": "apps/another-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/another-app-e2e/cypress.json",
+            "tsConfig": "apps/another-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "another-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "another-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/another-app-e2e/.eslintrc",
+            "tsConfig": ["apps/another-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/another-app-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {

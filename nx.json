@@ -30,12 +30,17 @@
     },
     "next-app-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "next-app"
-      ]
+      "implicitDependencies": ["next-app"]
     },
     "shared-ui": {
       "tags": []
+    },
+    "another-app": {
+      "tags": []
+    },
+    "another-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["another-app"]
     }
   }
 }
