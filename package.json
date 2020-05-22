@@ -24,6 +24,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
+    "build:next" : "nx build next-app --configuration=production",
+    "build:another" : "nx build another-app --configuration=production",
     "serve:next" : "nx serve next-app --port 4201",
     "serve:another" : "nx serve another-app --port 4202",
     "serve:storybook": "nx run shared-ui:storybook --port 4200"
