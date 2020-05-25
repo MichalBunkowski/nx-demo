@@ -1,26 +1,17 @@
 ```tsx
-import React, { useState } from 'react';
+import React from 'react';
 
-import { PNCountryCodeSelector } from '@bitpesa/aza-reusables';
+import { Button } from '@bitpesa/aza-reusables';
 
 const App = () => {
-  const [phonenumber, setPhoneNumber] = useState({
-    value: '',
-    code: '',
-  });
-
   return (
-    <div style={{ width: '25%', margin: 'auto' }}>
-      <p>1.) Phone number input with country code selector.</p>
-      <PNCountryCodeSelector
-        name="phone_number"
-        error={false}
-        onChange={(value, code) => {
-          setPhoneNumber({ ...phonenumber, value, code });
-        }}
-        value={phonenumber.value}
-      />
-    </div>
+    <Button
+      padding={10}
+      text="Click me"
+      contained={false}
+      disabled={false}
+      fullWidth={false}
+    />
   );
 };
 
@@ -29,23 +20,14 @@ export default App;
 
 ## Options (optional = ?)
 
-|        Props         |   type   |    #     |
-| :------------------: | :------: | :------: |
-|        error         | boolean  | optional |
-|  defaultCountryCode  |  string  | optional |
-|         name         |  string  | required |
-|        value         |  string  | required |
-| blackListedCountries | string[] | optional |
-|       onChange       |   func   | required |
-|      styleProps      | object\* |  option  |
+|   Props   |  type   |    #     |
+| :-------: | :-----: | :------: |
+|  padding  | number  | optional |
+|   text    | string  | required |
+| contained | boolean | optional |
+| disabled  | boolean | optional |
+| fullWidth | boolean | optional |
 
-```
-  styleProps?: {
-    codeFontFamily?: string;
-    inputFontFamily?: string;
-    codeListFontFamily?: string;
-    dropDownCodeFontFamily?: string;
-    countryNameFontFamily?: string;
-  };
+## Figma desing
 
-```
+[https://www.figma.com/file/49zv0q7tbVZE82uBhv2zZd/BFX-Master-Design-File?node-id=0%3A15311](https://www.figma.com/file/49zv0q7tbVZE82uBhv2zZd/BFX-Master-Design-File?node-id=0%3A15311)

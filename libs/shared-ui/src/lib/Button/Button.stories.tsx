@@ -2,13 +2,15 @@ import React from 'react';
 import { text, number, boolean } from '@storybook/addon-knobs';
 import Button from './Button';
 import CircleButton from './CircleButton';
-import AzaButton from './AzaButton';
+import CustomButton from './CustomButton';
 
-import ButtonReadMe from './button.md'
+import markdown from './button.md';
 
-export default { title: 'Button' };
+export default {
+  title: 'Button',
+};
 
-export const buttonDefaule = () => (
+export const buttonDefault = () => (
   <Button
     padding={number('Padding', 0)}
     text={text('Text', 'Click me')}
@@ -18,6 +20,12 @@ export const buttonDefaule = () => (
   />
 );
 
+buttonDefault.story = {
+  parameters: {
+    notes: { markdown },
+  },
+};
+
 export const circleButton = () => (
   <CircleButton
     disabled={boolean('Disabled', false)}
@@ -26,12 +34,12 @@ export const circleButton = () => (
 );
 
 export const primaryButton = () => (
-  <AzaButton
+  <CustomButton
     color="primary"
     variant="contained"
     danger={boolean('Danger', false)}
     loading={boolean('Loading', false)}
   >
     Primary Button
-  </AzaButton>
+  </CustomButton>
 );

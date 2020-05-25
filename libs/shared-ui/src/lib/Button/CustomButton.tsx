@@ -105,7 +105,7 @@ interface Props extends Omit<ButtonProps, 'variant' | 'color' | 'size'> {
   loading?: boolean;
 }
 
-export default function AzaButton({
+export default function CustomButton({
   size = 'regular',
   color,
   variant,
