@@ -4,6 +4,8 @@ import Button from './Button';
 import CircleButton from './CircleButton';
 import AzaButton from './AzaButton';
 
+import ButtonReadMe from './button.md'
+
 export default { title: 'Button' };
 
 export const buttonDefaule = () => (
