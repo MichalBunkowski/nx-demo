@@ -1,3 +1,4 @@
 {
-  "ENV" : "prod"
+  "ENV" : "prod",
+  "DOMAIN": "https://nx-demo-next-app.netlify.app"
 }

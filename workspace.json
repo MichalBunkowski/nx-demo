@@ -230,6 +230,34 @@
           }
         }
       }
+    },
+    "cookies": {
+      "root": "libs/cookies",
+      "sourceRoot": "libs/cookies/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/cookies/.eslintrc",
+            "tsConfig": [
+              "libs/cookies/tsconfig.lib.json",
+              "libs/cookies/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/cookies/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cookies/jest.config.js",
+            "tsConfig": "libs/cookies/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

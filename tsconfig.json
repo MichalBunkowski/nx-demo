@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-demo/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@nx-demo/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@nx-demo/cookies": ["libs/cookies/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
