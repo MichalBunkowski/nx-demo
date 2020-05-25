@@ -1,7 +1,7 @@
 ```tsx
 import React from 'react';
 
-import { Button } from '@bitpesa/aza-reusables';
+import { Button } from '@Button';
 
 const App = () => {
   return (
