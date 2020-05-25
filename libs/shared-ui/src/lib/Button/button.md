@@ -1,7 +1,7 @@
 ```tsx
 import React from 'react';
 
-import { Button } from '@bitpesa/aza-reusables';
+import { Button } from '@nx-demo/shared-ui';
 
 const App = () => {
   return (
@@ -27,7 +27,3 @@ export default App;
 | contained | boolean | optional |
 | disabled  | boolean | optional |
 | fullWidth | boolean | optional |
-
-## Figma desing
-
-[https://www.figma.com/file/49zv0q7tbVZE82uBhv2zZd/BFX-Master-Design-File?node-id=0%3A15311](https://www.figma.com/file/49zv0q7tbVZE82uBhv2zZd/BFX-Master-Design-File?node-id=0%3A15311)
