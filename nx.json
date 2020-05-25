@@ -41,6 +41,9 @@
     "another-app-e2e": {
       "tags": [],
       "implicitDependencies": ["another-app"]
+    },
+    "cookies": {
+      "tags": []
     }
   }
 }
