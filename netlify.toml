@@ -1,4 +1,6 @@
 [[plugins]]
 package = "./tools/plugins/netlify/cancel-build"
+
+[[plugins]]
 package = "./tools/plugins/netlify/create-env-vars"
 

@@ -8,13 +8,13 @@ module.exports = {
 
     const root = path.resolve(__dirname);
 
-    fs.writeFile(
-      `${root}/${app}/environment.${env}.json`,
-      JSON.stringify(process.env),
-      (err) => {
-        if (err) throw err;
-        console.log(`File environment.${env}.json is created successfully.`);
-      }
-    );
+    const envPath = `${root}/${app}/environment.${env}.json`;
+    const content = JSON.stringify(process.env);
+
+    fs.writeFile(envPath, content, (err) => {
+      if (err) throw err;
+
+      console.log(`File environment.${env}.json is created successfully.`);
+    });
   },
 };
