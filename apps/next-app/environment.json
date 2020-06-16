@@ -1,5 +1,0 @@
-{
-  "ENV" : "develop",
-  "DOMAIN": "localhost",
-  "APP": "next-app"
-}
