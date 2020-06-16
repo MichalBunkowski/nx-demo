@@ -11,6 +11,8 @@ module.exports = {
     const envPath = `${root}/${app}/environment.${env}.json`;
     const content = JSON.stringify(process.env);
 
+    console.log('Content: ', content);
+
     fs.writeFile(envPath, content, (err) => {
       if (err) throw err;
 
