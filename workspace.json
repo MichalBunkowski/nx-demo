@@ -40,12 +40,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/next-app/.eslintrc",
             "tsConfig": [
               "apps/next-app/tsconfig.json",
               "apps/next-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/next-app/**"]
+            "exclude": ["**/node_modules/**", "!apps/next-app/**/*"]
           }
         },
         "test": {
@@ -80,9 +79,8 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/next-app-e2e/.eslintrc",
             "tsConfig": ["apps/next-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/next-app-e2e/**"]
+            "exclude": ["**/node_modules/**", "!apps/next-app-e2e/**/*"]
           }
         }
       }
@@ -97,12 +95,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/shared-ui/.eslintrc",
             "tsConfig": [
               "libs/shared-ui/tsconfig.lib.json",
               "libs/shared-ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared-ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/shared-ui/**/*"]
           }
         },
         "test": {
@@ -184,12 +181,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/another-app/.eslintrc",
             "tsConfig": [
               "apps/another-app/tsconfig.json",
               "apps/another-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/another-app/**"]
+            "exclude": ["**/node_modules/**", "!apps/another-app/**/*"]
           }
         },
         "test": {
@@ -224,9 +220,8 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/another-app-e2e/.eslintrc",
             "tsConfig": ["apps/another-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/another-app-e2e/**"]
+            "exclude": ["**/node_modules/**", "!apps/another-app-e2e/**/*"]
           }
         }
       }
@@ -241,12 +236,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/cookies/.eslintrc",
             "tsConfig": [
               "libs/cookies/tsconfig.lib.json",
               "libs/cookies/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/cookies/**"]
+            "exclude": ["**/node_modules/**", "!libs/cookies/**/*"]
           }
         },
         "test": {
