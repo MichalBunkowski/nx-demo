@@ -1,2 +1,5 @@
 [[plugins]]
-package = "./tools/plugins/pre-build"
+package = "./tools/plugins/cancel-build"
+
+[[plugins]]
+package = "./tools/plugins/create-env-vars"
