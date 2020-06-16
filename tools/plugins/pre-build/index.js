@@ -4,8 +4,17 @@ const exec = require('child_process');
 
 module.exports = {
   onPreBuild: () => {
-    exec.execSync('pwd');
-    console.log('__dirname', __dirname);
-    console.log('resolved __dirname', path.resolve(__dirname));
+    const env = process.env.ENV;
+    const app = process.env.APP_NAME;
+
+    fs.writeFileSync(
+      `./apps/${app}/environment.${env}.json`,
+      `{
+                "ENV" : "${process.env.ENV}",
+                "DOMAIN": "${process.env.DOMAIN}"
+            }`
+    );
+
+    exec.execSync(`ls ./apps/${app}/`);
   },
 };
