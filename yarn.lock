@@ -1782,10 +1782,26 @@
     "@angular-devkit/core" "~9.1.0"
     "@angular-devkit/schematics" "~9.1.0"
 
+"@nrwl/jest@9.4.2":
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-9.4.2.tgz#896f63c9fa75486e43a9ed32cc530cc248e1709a"
+  integrity sha512-QbIqHJWVn69CT/5a+Raw7OHYCa6A+g3sxkCjMm4rtaiQ93fPgrNhR5k2UbLbP0KVrml6sAHFWYYtBVdnnq8WRA==
+  dependencies:
+    "@angular-devkit/architect" "~0.901.0"
+    "@angular-devkit/core" "~9.1.0"
+    "@angular-devkit/schematics" "~9.1.0"
+
 "@nrwl/linter@9.3.0":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-9.3.0.tgz#9167b709cbb17d0012ab29a54a4a10c1a7228c47"
   integrity sha512-3FxY2RKt2TUuOSPq9zhGfk48JPA51hoBoEcJ2Na/b87bKGMBspYoHV7k0TgF5/B3g2lQdk0/xARRBWAOJkAJjg==
+  dependencies:
+    "@angular-devkit/architect" "~0.901.0"
+
+"@nrwl/linter@9.4.2":
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-9.4.2.tgz#7ac69a935af18761a9b1ef0f26b2adfabc558edd"
+  integrity sha512-bdrEftmEmFnpM+Avl2jBIQzeT06+ocvlqf+JkOWVmsRteiXkR/fv+/egZGriLmkytpnxpfLwEFjY8bXkZkm9VA==
   dependencies:
     "@angular-devkit/architect" "~0.901.0"
 
@@ -1798,6 +1814,46 @@
     "@nrwl/react" "9.3.0"
     "@svgr/webpack" "^4.3.3"
     url-loader "^2.2.0"
+
+"@nrwl/node@9.4.2":
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-9.4.2.tgz#ee8c3a752b4fc2885c3f5f4f86ec85595cad71b0"
+  integrity sha512-1QFIaI+pTGIlQkv4TxibE5BhPZel7sjWrNQJBT13+3D//5rfd9bjNqgwvfiLk5OMK/E5EeZuB7ENw7eY9uNNLw==
+  dependencies:
+    "@angular-devkit/architect" "~0.901.0"
+    "@angular-devkit/build-webpack" "~0.901.0"
+    "@angular-devkit/core" "~9.1.0"
+    "@angular-devkit/schematics" "~9.1.0"
+    "@nrwl/jest" "9.4.2"
+    "@nrwl/linter" "9.4.2"
+    circular-dependency-plugin "5.2.0"
+    copy-webpack-plugin "5.1.1"
+    fork-ts-checker-webpack-plugin "^3.1.1"
+    license-webpack-plugin "2.1.2"
+    source-map-support "0.5.12"
+    tree-kill "1.2.2"
+    ts-loader "5.4.5"
+    tsconfig-paths-webpack-plugin "3.2.0"
+    webpack "4.42.0"
+    webpack-dev-server "3.9.0"
+    webpack-merge "4.2.1"
+    webpack-node-externals "1.7.2"
+
+"@nrwl/nx-plugin@^9.4.2":
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx-plugin/-/nx-plugin-9.4.2.tgz#2c7b89fd92d30b57b98cc0262c28c21f3b01dc1b"
+  integrity sha512-Oo6reXjErfJsLFIAkBCrrq1xgHGcGAoq+j8PsrTT+zDl3kdTiUH32hL9SDDxFHI93LUSr1cUZ+EYbFEKGRAkNw==
+  dependencies:
+    "@angular-devkit/architect" "~0.901.0"
+    "@angular-devkit/core" "~9.1.0"
+    "@angular-devkit/schematics" "~9.1.0"
+    "@nrwl/linter" "9.4.2"
+    "@nrwl/node" "9.4.2"
+    fs-extra "7.0.1"
+    inquirer "^6.3.1"
+    tmp "0.0.33"
+    yargs "^11.0.0"
+    yargs-parser "10.0.0"
 
 "@nrwl/react@9.3.0":
   version "9.3.0"
@@ -7794,6 +7850,15 @@ fs-extra@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.0.tgz#0f0afb290bb3deb87978da816fcd3c7797f3a817"
   integrity sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+fs-extra@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -14545,6 +14610,14 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
     urix "^0.1.0"
+
+source-map-support@0.5.12:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.12.tgz#b4f3b10d51857a5af0138d3ce8003b201613d599"
+  integrity sha512-4h2Pbvyy15EE02G+JOZpUCmqWJuqrs+sEkzewTm++BPi7Hvn/HwcqLAcNxYAyI0x13CpPPn+kMjl+hplXMHITQ==
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
 
 source-map-support@0.5.16:
   version "0.5.16"
