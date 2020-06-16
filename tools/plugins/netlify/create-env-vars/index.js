@@ -4,7 +4,7 @@ function createFile(path, content) {
   fs.writeFile(path, content, (err) => {
     if (err) throw err;
 
-    console.log('File is created successfully');
+    console.log('File is created successfully.');
   });
 }
 
