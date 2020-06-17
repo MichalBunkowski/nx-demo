@@ -9,7 +9,7 @@ function createFile(path, content) {
 }
 
 module.exports = {
-  onInit: () => {
+  onPreBuild: () => {
     const env = process.env.ENV;
     const app = process.env.APP_NAME;
 
