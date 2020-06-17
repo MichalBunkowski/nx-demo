@@ -7,11 +7,7 @@ function projectChanged(currentProject, fromHash, toHash) {
     )
     .toString();
 
-  console.log('Affected output: ', output);
-
   const changedProjects = JSON.parse(output).projects;
-
-  console.log('Changed projects: ', changedProjects);
 
   return !!changedProjects.find((project) => project === currentProject);
 }
