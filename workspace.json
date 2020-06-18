@@ -129,7 +129,7 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/shared-ui",
+            "outputPath": "docs",
             "config": {
               "configFolder": "libs/shared-ui/.storybook"
             }
