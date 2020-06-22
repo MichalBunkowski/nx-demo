@@ -7,6 +7,16 @@
       "projectType": "application",
       "schematics": {},
       "architect": {
+        "deploy": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "cwd": ".",
+            "parallel":  true,
+            "commands": [
+              "echo Deployed another-app!"
+            ]
+          }
+        },
         "build": {
           "builder": "@nrwl/next:build",
           "options": {
@@ -91,6 +101,16 @@
       "projectType": "library",
       "schematics": {},
       "architect": {
+        "deploy": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "cwd": ".",
+            "parallel":  true,
+            "commands": [
+              "echo Published shared-ui!"
+            ]
+          }
+        },
         "lint": {
           "builder": "@nrwl/linter:lint",
           "options": {
@@ -152,14 +172,9 @@
           "builder": "@nrwl/workspace:run-commands",
           "options": {
             "cwd": ".",
-            "parallel":  false,
+            "parallel":  true,
             "commands": [
-              {
-                "command": "curl -X POST -d {} https://api.netlify.com/build_hooks/5ee9d2068caa62de3de2fb5d"
-              },
-              {
-                "command": "echo Deployed!"
-              }
+              "echo Deployed another-app!"
             ]
           }
         },
