@@ -7,6 +7,18 @@
       "projectType": "application",
       "schematics": {},
       "architect": {
+        "deploy": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "cwd": ".",
+            "parallel":  false,
+            "commands": [
+              {
+                "command": "echo Deployed next-app!"
+              }
+            ]
+          }
+        },
         "build": {
           "builder": "@nrwl/next:build",
           "options": {
@@ -155,10 +167,7 @@
             "parallel":  false,
             "commands": [
               {
-                "command": "curl -X POST -d {} https://api.netlify.com/build_hooks/5ee9d2068caa62de3de2fb5d"
-              },
-              {
-                "command": "echo Deployed!"
+                "command": "echo Deployed another-app!"
               }
             ]
           }
